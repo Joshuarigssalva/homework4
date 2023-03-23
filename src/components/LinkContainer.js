@@ -1,6 +1,6 @@
 import { useState } from 'react'
-// import Table from './Table';
-// import Form from './Form';
+import Table from './Table';
+import Form from './Form';
 
 const LinkContainer = (props) => {
   const handleRemove = (index) => {
@@ -10,6 +10,7 @@ const LinkContainer = (props) => {
   }
 
   const handleSubmit = (favLink) => {
+    
     /*
             TODO - Create logic to set state and add new favLink to favLinks array in state
         */
