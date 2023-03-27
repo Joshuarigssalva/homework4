@@ -22,6 +22,12 @@ const LinkContainer = (props) => {
     /*
             TODO - Create logic to set state and add new favLink to favLinks array in state
         */
+       if (webName != '' && link != '') {
+        const linkobject = {webName:webName, link:link};
+        setArray([...array, linkobject]);
+        setWebName('');
+        setLink('');
+       }
   }
 
   return (
