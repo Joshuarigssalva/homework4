@@ -42,7 +42,8 @@ const LinkContainer = (props) => {
 
       <h3>Add New</h3>
       {/*TODO - Add Form Component */}
-      
+      <Form handleSubmit = {handleSubmit} webName = {webName} setWebName = {setWebName}
+      link = {link} setLink = {setLink}/>
     </div>
   )
 }
