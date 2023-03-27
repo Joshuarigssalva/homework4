@@ -11,10 +11,11 @@ const Form = () => {
   const onFormSubmit = (event) => {
     // to prevent page reload on form submit
     event.preventDefault()
-    
+
     /*
             TODO - Logic for calling props to handle submission and setting state changes
         */
+       this.useState.handleSubmit(useState);
   }
 
   return (
