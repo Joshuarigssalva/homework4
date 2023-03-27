@@ -5,12 +5,13 @@ const Form = () => {
     /*
             TODO - Logic for changing state based on form changes
         */
+       this.useState({webName: event.target.value,});
   }
 
   const onFormSubmit = (event) => {
     // to prevent page reload on form submit
     event.preventDefault()
-
+    
     /*
             TODO - Logic for calling props to handle submission and setting state changes
         */
