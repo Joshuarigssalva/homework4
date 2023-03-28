@@ -1,39 +1,50 @@
-import { useState } from 'react'
+import React, { Component } from "react";
 
-const Form = () => {
-  const handleChange = (event) => {
-    /*
-            TODO - Logic for changing state based on form changes
-        */
-       this.useState({webName: event.target.value,});
+class Form extends Component {
+  render() {
+    const { handleSubmit, setWebName, webName, link, setLink } = this.props;
+    return (
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        handleSubmit();
+      }}>
+        <div>
+          
+        <div>Name of Website</div>
+
+        <input value={webName}
+        onChange={(event) => setWebName(event.target.value)}
+        type="webName" name="array" style={{width:'25%'}}/>
+
+        </div>
+
+        <div>URL</div>
+
+        <div>
+
+        <input value={link}
+        onChange={(event) => setLink(event.target.value)}
+        type="link" name="link" style={{width:'25%'}}/>
+
+        </div>
+        
+        <button type ="submit"
+        style={{
+          backgroundColor: 'lightblue',
+          color: 'black',
+          fontSize: '12px',
+          fontWeight:'bold',
+          padding:'5px',
+          cursor:'pointer',
+          width:'70px',
+          borderRadius:'5px',
+          height:'35px'
+        }}
+        >Submit</button>
+
+      </form>
+    );
   }
-
-  const onFormSubmit = (event) => {
-    // to prevent page reload on form submit
-    event.preventDefault()
-
-    /*
-            TODO - Logic for calling props to handle submission and setting state changes
-        */
-       this.useState.handleSubmit(useState);
-  }
-
-  return (
-    <form onSubmit={onFormSubmit}>
-      <label for = "name">Name</label>
-      <input
-      type={"text"}
-      value = {useState.webName}
-      onChange = {handleChange}/>
-      <label for = "URL">URL</label>
-      <input
-      type={"text"}
-      value={useState.URL}
-      onChange = {handleChange}/>
-      <button>Submit</button>
-      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
-    </form>
-  )
 }
 
 export default Form

@@ -6,6 +6,7 @@ const LinkContainer = (props) => {
   const [array, setArray] = useState([]);
   const [webName, setWebName] = useState('');
   const [link, setLink] = useState('');
+  
   const handleRemove = (index) => {
     /*
             TODO - Create logic for setting the state to filter array and remove favLink at index
@@ -31,7 +32,7 @@ const LinkContainer = (props) => {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{display:'block'}}>
       <h1>My Favorite Links</h1>
       <p>Add a new url with a name and link to the table.</p>
       {/*TODO - Add Table Component */
@@ -42,7 +43,7 @@ const LinkContainer = (props) => {
 
       <h3>Add New</h3>
       {/*TODO - Add Form Component */}
-      <Form handleSubmit = {handleSubmit} webName = {webName} setWebName = {setWebName}
+      <Form handleSubmit = {handleSubmit} setWebName = {setWebName} webName = {webName} 
       link = {link} setLink = {setLink}/>
     </div>
   )
