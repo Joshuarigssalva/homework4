@@ -19,7 +19,18 @@ const Form = () => {
   }
 
   return (
-    <form>
+    <form onSubmit={onFormSubmit}>
+      <label for = "name">Name</label>
+      <input
+      type={"text"}
+      value = {useState.webName}
+      onChange = {handleChange}/>
+      <label for = "URL">URL</label>
+      <input
+      type={"text"}
+      value={useState.URL}
+      onChange = {handleChange}/>
+      <button>Submit</button>
       {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
     </form>
   )
