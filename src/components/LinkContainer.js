@@ -12,12 +12,12 @@ const LinkContainer = (props) => {
         */
        
        const removeArray = [...array];
-       removeArray.filter((value, i) => i !== index);
+       removeArray.splice(index, 1);
        setArray(removeArray);
        
   }
 
-  const handleSubmit = (favLink) => {
+  const handleSubmit = () => {
 
     /*
             TODO - Create logic to set state and add new favLink to favLinks array in state
